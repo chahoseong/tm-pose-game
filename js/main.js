@@ -23,7 +23,7 @@ async function init() {
     // 1. PoseEngine 초기화
     poseEngine = new PoseEngine("./my_model/");
     const { maxPredictions, webcam } = await poseEngine.init({
-      size: 200,
+      size: 500, // 200 -> 500
       flip: true
     });
 
@@ -38,8 +38,8 @@ async function init() {
 
     // 4. 캔버스 설정
     const canvas = document.getElementById("canvas");
-    canvas.width = 200;
-    canvas.height = 200;
+    canvas.width = 500; // 200 -> 500
+    canvas.height = 500; // 200 -> 500
     ctx = canvas.getContext("2d");
 
     // 5. Label Container 설정
